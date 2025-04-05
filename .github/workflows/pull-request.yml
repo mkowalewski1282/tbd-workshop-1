@@ -48,7 +48,7 @@ jobs:
       with:
         token_format: 'access_token'
         workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER_NAME }}
-        service_account: ${{ secrets.GCP_WORKLOAD_IDENTITY_SA_EMAIL }}
+        service_account: 'tbd-2025l-9922-lab@tbd-2025l-9922.iam.gserviceaccount.com'
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
     - uses: 'docker/login-action@v2'
