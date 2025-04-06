@@ -12,14 +12,16 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
 3. In boostrap/variables.tf add your emails to variable "budget_channels".
 
+```hcl
 variable "budget_channels" {
   type        = map(string)
   description = "Budget notification channels"
   default = {
-    milosz-kowalewski : "01168891@pw.edu.pl"
-    patryk-ploski : "01168908@pw.edu.pl"
+    milosz-kowalewski = "01168891@pw.edu.pl"
+    patryk-ploski     = "01168908@pw.edu.pl"
   }
 }
+```
 
 4. From avaialble Github Actions select and run destroy on main branch.
 
