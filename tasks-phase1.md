@@ -32,8 +32,6 @@ variable "budget_channels" {
 
     2. Create PR from this branch to **YOUR** master and merge it to make new release.
 
-    ***place the screenshot from GA after succesfull application of release***
-
     ![alt text](images/release_task_1.png)
 
 
