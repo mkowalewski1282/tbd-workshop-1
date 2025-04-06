@@ -25,6 +25,8 @@ variable "budget_channels" {
 
 4. From avaialble Github Actions select and run destroy on main branch.
 
+![alt text](images/destroy_action.png)
+
 5. Create new git branch and:
     1. Modify tasks-phase1.md file.
 
