@@ -43,7 +43,6 @@ variable "budget_channels" {
 
 7. Reach YARN UI
 
-   ***place the command you used for setting up the tunnel, the port and the screenshot of YARN UI here***
    ```hcl
    gcloud compute ssh tbd-cluster-m --project=tbd-2025l-9922 --zone=europe-west1-d --tunnel-through-iap -- -L 8088:localhost:8088
    ```
