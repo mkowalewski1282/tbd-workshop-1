@@ -34,6 +34,8 @@ variable "budget_channels" {
 
     ***place the screenshot from GA after succesfull application of release***
 
+    ![alt text](images/release_task_1.png)
+
 
 6. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
 
