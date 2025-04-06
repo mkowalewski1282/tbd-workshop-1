@@ -19,13 +19,12 @@ usage:
        asia: 20
        europe: 80
 
-    google_bigquery_table.usage:
-      monthly_active_storage_gb: 500
-      monthly_long_term_storage_gb: 2000
-      monthly_streaming_inserts_mb: 1500
-      monthly_storage_write_api_gb: 1500
-      monthly_storage_read_api_tb: 2000
-
-
    google_service_networking_connection.private_vpc_connection:
-     monthly_data_processed_gb: 200
+    monthly_egress_data_transfer_gb:
+      same_region: 250
+      us_or_canada: 100
+      europe: 70
+      asia: 50
+      south_america: 100
+      oceania: 50
+      worldwide: 200
