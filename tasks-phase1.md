@@ -65,7 +65,7 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
 
    ***place the screenshot from infracost output here***
 
-   ```hcl
+```hcl
    version: 0.1
 usage:
    google_artifact_registry.registry:
@@ -96,8 +96,7 @@ usage:
       south_america: 100
       oceania: 50
       worldwide: 200
-
-   ```
+```
 
    ![alt text](images/infracost_estimation.png)
 
