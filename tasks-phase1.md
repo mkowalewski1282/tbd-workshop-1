@@ -99,6 +99,8 @@ usage:
 
    ```
 
+   ![alt text](images/infracost_estimation.png)
+
 10. Create a BigQuery dataset and an external table using SQL
 
     ***place the code and output here***
