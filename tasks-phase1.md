@@ -65,6 +65,40 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
 
    ***place the screenshot from infracost output here***
 
+   ```hcl
+   version: 0.1
+usage:
+   google_artifact_registry.registry:
+     storage_gb: 80
+
+   google_storage_bucket.tbd_code_bucket:
+     storage_gb: 200
+     monthly_class_a_operations: 200
+     monthly_class_b_operations: 500
+     monthly_egress_data_gb: 170
+
+   google_storage_bucket.tbd_data_bucket:
+     storage_gb: 400
+     monthly_class_a_operations: 100
+     monthly_class_b_operations: 300
+     monthly_egress_data_transfer_gb:
+       same_continent: 90
+       worldwide: 400
+       asia: 20
+       europe: 80
+
+   google_service_networking_connection.private_vpc_connection:
+    monthly_egress_data_transfer_gb:
+      same_region: 250
+      us_or_canada: 100
+      europe: 70
+      asia: 50
+      south_america: 100
+      oceania: 50
+      worldwide: 200
+
+   ```
+
 10. Create a BigQuery dataset and an external table using SQL
 
     ***place the code and output here***
