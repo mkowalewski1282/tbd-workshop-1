@@ -39,6 +39,8 @@ variable "budget_channels" {
 
     ***describe one selected module and put the output of terraform graph for this module here***
 
+    ![alt text](images/terraform-graph-plan-dataproc.png)
+
 7. Reach YARN UI
 
    ***place the command you used for setting up the tunnel, the port and the screenshot of YARN UI here***
