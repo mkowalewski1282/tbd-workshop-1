@@ -100,6 +100,9 @@ usage:
 10. Create a BigQuery dataset and an external table using SQL
 
     ***place the code and output here***
+    ![alt text](images/big_query_code.png)
+
+    ![alt text](images/big_query_tasks_executions.png)
 
     ***why does ORC not require a table schema?***
 
