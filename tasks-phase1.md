@@ -118,6 +118,12 @@ usage:
     ***describe the cause and how to find the error***
 
 12. Add support for preemptible/spot instances in a Dataproc cluster
+    Added below code to tbd-workshop-1/modules/dataproc/main.tf
+    ```hcl
+    preemptible_worker_config {
+      num_instances = 1
+    }
+    ```
 
     ***place the link to the modified file and inserted terraform code***
 
