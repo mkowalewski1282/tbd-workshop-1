@@ -105,7 +105,7 @@ usage:
 
     ![alt text](images/big_query_tasks_executions.png)
 
-    ***why does ORC not require a table schema?***
+    ORC format has the schema built right into it, so you don’t need to define it separately. This makes it easier to use with tools like BigQuery, which can read the schema automatically.
 
 11. Find and correct the error in spark-job.py
     Before fix:
