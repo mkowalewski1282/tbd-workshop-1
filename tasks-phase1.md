@@ -57,6 +57,8 @@ variable "budget_channels" {
 
     ***place your diagram here***
 
+    ![alt text](images/architecture_diagram.png)
+
 9. Create a new PR and add costs by entering the expected consumption into Infracost
 For all the resources of type: `google_artifact_registry`, `google_storage_bucket`, `google_service_networking_connection`
 create a sample usage profiles and add it to the Infracost task in CI/CD pipeline. Usage file [example](https://github.com/infracost/infracost/blob/master/infracost-usage-example.yml)
@@ -114,7 +116,7 @@ usage:
     After changing data bucket name in spark-job.py file:
 
     ![alt text](images/pyspark_after_fix.png)
-    
+
     ***describe the cause and how to find the error***
 
 12. Add support for preemptible/spot instances in a Dataproc cluster
