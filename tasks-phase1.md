@@ -107,7 +107,14 @@ usage:
     ***why does ORC not require a table schema?***
 
 11. Find and correct the error in spark-job.py
+    Before fix:
 
+    ![alt text](images/pyspark_before_fix.png)
+
+    After changing data bucket name in spark-job.py file:
+
+    ![alt text](images/pyspark_after_fix.png)
+    
     ***describe the cause and how to find the error***
 
 12. Add support for preemptible/spot instances in a Dataproc cluster
