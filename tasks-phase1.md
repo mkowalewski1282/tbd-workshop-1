@@ -120,13 +120,13 @@ usage:
     ![alt text](images/spark_job_fix.png)
 
 12. Add support for preemptible/spot instances in a Dataproc cluster
-    Added below code to tbd-workshop-1/modules/dataproc/main.tf
+    Added below code to [tbd-workshop-1/modules/dataproc/main.tf](https://github.com/mkowalewski1282/tbd-workshop-1/blob/master/modules/dataproc/main.tf)
     ```hcl
     preemptible_worker_config {
       num_instances = 1
     }
     ```
+    ![alt text](images/vm_preemptible.png)
 
-    ***place the link to the modified file and inserted terraform code***
 
 
