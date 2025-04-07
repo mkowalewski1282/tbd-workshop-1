@@ -100,14 +100,30 @@ usage:
 10. Create a BigQuery dataset and an external table using SQL
 
     ***place the code and output here***
+    ![alt text](images/big_query_code.png)
+
+    ![alt text](images/big_query_tasks_executions.png)
 
     ***why does ORC not require a table schema?***
 
 11. Find and correct the error in spark-job.py
+    Before fix:
 
+    ![alt text](images/pyspark_before_fix.png)
+
+    After changing data bucket name in spark-job.py file:
+
+    ![alt text](images/pyspark_after_fix.png)
+    
     ***describe the cause and how to find the error***
 
 12. Add support for preemptible/spot instances in a Dataproc cluster
+    Added below code to tbd-workshop-1/modules/dataproc/main.tf
+    ```hcl
+    preemptible_worker_config {
+      num_instances = 1
+    }
+    ```
 
     ***place the link to the modified file and inserted terraform code***
 
