@@ -116,7 +116,8 @@ usage:
 
     ![alt text](images/pyspark_after_fix.png)
 
-    ***describe the cause and how to find the error***
+    We found the error in the logs on GCP (above) and changed the file in a way shown below:
+    ![alt text](images/spark_job_fix.png)
 
 12. Add support for preemptible/spot instances in a Dataproc cluster
     Added below code to tbd-workshop-1/modules/dataproc/main.tf
