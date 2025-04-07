@@ -55,7 +55,6 @@ variable "budget_channels" {
     3. List of buckets for disposal
     4. Description of network communication (ports, why it is necessary to specify the host for the driver) of Apache Spark running from Vertex AI Workbech
 
-    ***place your diagram here***
 
     ![alt text](images/architecture_diagram.png)
 
