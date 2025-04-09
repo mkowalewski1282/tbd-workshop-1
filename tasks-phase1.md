@@ -5,8 +5,13 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 1. Authors:
 
    TBD - z10
+   Miłosz Kowalewski, 318381
+   Patryk Płoski, 318398
 
    <https://github.com/mkowalewski1282/tbd-workshop-1/tree/master>
+
+   Komentarz:
+   Zgodnie z ustaleniem z wykładowcą zaznaczamy, że projekt realizujemy w 2 osoby, co miało wpłynąć na ocenę.
 
 2. Follow all steps in README.md.
 
@@ -108,7 +113,7 @@ usage:
     ORC format has the schema built right into it, so you don’t need to define it separately. This makes it easier to use with tools like BigQuery, which can read the schema automatically.
 
 11. Find and correct the error in spark-job.py
-    
+
     Before fix:
 
     ![alt text](images/pyspark_before_fix.png)
@@ -121,7 +126,7 @@ usage:
     ![alt text](images/spark_job_fix.png)
 
 12. Add support for preemptible/spot instances in a Dataproc cluster
-    
+
     Added below code to [tbd-workshop-1/modules/dataproc/main.tf](https://github.com/mkowalewski1282/tbd-workshop-1/blob/master/modules/dataproc/main.tf)
     ```hcl
     preemptible_worker_config {
