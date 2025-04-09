@@ -42,7 +42,9 @@ variable "budget_channels" {
 
 6. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
 
-    ***describe one selected module and put the output of terraform graph for this module here***
+    Terraform configuration sets up a Google Cloud Dataproc cluster, with an explicit dependency on the Dataproc API being enabled. This dependency is depicted in the generated graph, where the `google_project_service.dataproc` resource links to the `google_dataproc_cluster.tbd-dataproc-cluster`. The cluster setup specifies a software image, a network configuration using internal IPs and a defined subnet, and initialization actions to install Python packages. It also outlines the setup for a single master node and two standard worker nodes, all using a defined machine type and standard boot disks.
+
+    Variables define the project name, region, image version, machine type, and subnet. Running terraform plan would detail the resources to be created, while terraform graph visualizes their dependencies. In a multi-module context, terraform graph helps distinguish module boundaries and their relationships. The `dataproc_cluster_name` output indicates an exported attribute of the deployed cluster.
 
     ![alt text](images/terraform-graph-plan-dataproc.png)
 
