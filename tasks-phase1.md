@@ -5,8 +5,13 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 1. Authors:
 
    TBD - z10
+   Miłosz Kowalewski, 318381
+   Patryk Płoski, 318398
 
    <https://github.com/mkowalewski1282/tbd-workshop-1/tree/master>
+
+   Komentarz:
+   Zgodnie z ustaleniem z wykładowcą zaznaczamy, że projekt realizujemy w 2 osoby, co miało wpłynąć na ocenę.
 
 2. Follow all steps in README.md.
 
@@ -37,7 +42,9 @@ variable "budget_channels" {
 
 6. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
 
-    ***describe one selected module and put the output of terraform graph for this module here***
+    Terraform configuration sets up a Google Cloud Dataproc cluster, with an explicit dependency on the Dataproc API being enabled. This dependency is depicted in the generated graph, where the `google_project_service.dataproc` resource links to the `google_dataproc_cluster.tbd-dataproc-cluster`. The cluster setup specifies a software image, a network configuration using internal IPs and a defined subnet, and initialization actions to install Python packages. It also outlines the setup for a single master node and two standard worker nodes, all using a defined machine type and standard boot disks.
+
+    Variables define the project name, region, image version, machine type, and subnet. Running terraform plan would detail the resources to be created, while terraform graph visualizes their dependencies. In a multi-module context, terraform graph helps distinguish module boundaries and their relationships. The `dataproc_cluster_name` output indicates an exported attribute of the deployed cluster.
 
     ![alt text](images/terraform-graph-plan-dataproc.png)
 
@@ -55,7 +62,8 @@ variable "budget_channels" {
     3. List of buckets for disposal
     4. Description of network communication (ports, why it is necessary to specify the host for the driver) of Apache Spark running from Vertex AI Workbech
 
-    ***place your diagram here***
+
+    ![alt text](images/architecture_diagram.png)
 
 9. Create a new PR and add costs by entering the expected consumption into Infracost
 For all the resources of type: `google_artifact_registry`, `google_storage_bucket`, `google_service_networking_connection`
@@ -99,14 +107,15 @@ usage:
 
 10. Create a BigQuery dataset and an external table using SQL
 
-    ***place the code and output here***
+
     ![alt text](images/big_query_code.png)
 
     ![alt text](images/big_query_tasks_executions.png)
 
-    ***why does ORC not require a table schema?***
+    ORC format has the schema built right into it, so you don’t need to define it separately. This makes it easier to use with tools like BigQuery, which can read the schema automatically.
 
 11. Find and correct the error in spark-job.py
+
     Before fix:
 
     ![alt text](images/pyspark_before_fix.png)
@@ -114,17 +123,19 @@ usage:
     After changing data bucket name in spark-job.py file:
 
     ![alt text](images/pyspark_after_fix.png)
-    
-    ***describe the cause and how to find the error***
+
+    We found the error in the logs on GCP (above) and changed the file in a way shown below:
+    ![alt text](images/spark_job_fix.png)
 
 12. Add support for preemptible/spot instances in a Dataproc cluster
-    Added below code to tbd-workshop-1/modules/dataproc/main.tf
+
+    Added below code to [tbd-workshop-1/modules/dataproc/main.tf](https://github.com/mkowalewski1282/tbd-workshop-1/blob/master/modules/dataproc/main.tf)
     ```hcl
     preemptible_worker_config {
       num_instances = 1
     }
     ```
+    ![alt text](images/vm_preemptible.png)
 
-    ***place the link to the modified file and inserted terraform code***
 
 
